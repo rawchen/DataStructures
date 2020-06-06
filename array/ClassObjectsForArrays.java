@@ -1,15 +1,15 @@
 package array;
 
-// Java program to demonstrate  
-// Class Objects for Arrays 
+// Java程序演示
+// 数组的类对象
   
-class ClassObjectsForArrays {  
+class ClassObjectsForArrays {
     public static void main(String args[]) { 
         int intArray[] = new int[3]; 
         byte byteArray[] = new byte[3]; 
         short shortsArray[] = new short[3]; 
           
-        // array of Strings 
+        // 字符串数组
         String[] strArray = new String[3]; 
           
         System.out.println(intArray.getClass()); 
