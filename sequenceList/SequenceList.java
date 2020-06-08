@@ -61,6 +61,9 @@ public class SequenceList<T> implements Iterable<T> {
 
     //在i元素处插入元素T
     public void insert(int i, T t) {
+        if (N==eles.length){
+            resize(2*eles.length);
+        }
         //先把i索引处的元素及其后面的元素依次向后移动一位
         for (int index = N; index > i; index--) {
             eles[index] = eles[index-1];
@@ -81,6 +84,11 @@ public class SequenceList<T> implements Iterable<T> {
         }
         //元素个数-1
         N--;
+
+        if (N < eles.length / 4) {
+            resize(eles.length/2);
+        }
+
         return current;
     }
 
@@ -103,6 +111,22 @@ public class SequenceList<T> implements Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new SIterator();
+    }
+
+    private class SIterator implements Iterator {
+        private int cusor;
+        public SIterator(){
+            this.cusor = 0;
+        }
+        @Override
+        public boolean hasNext() {
+            return cusor<N;
+        }
+
+        @Override
+        public Object next() {
+            return eles[cusor++];
+        }
     }
 }

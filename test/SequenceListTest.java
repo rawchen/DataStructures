@@ -11,6 +11,13 @@ public class SequenceListTest {
         sl.insert("科比");
         sl.insert("麦迪");
         sl.insert(0,"詹姆斯");
+
+        for (String s :
+                sl) {
+            System.out.println(s);
+        }
+        System.out.println("----------------------------------");
+
         //测试获取
         System.out.println(sl);
         String getResult = sl.get(1);
