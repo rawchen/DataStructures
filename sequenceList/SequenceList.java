@@ -1,5 +1,6 @@
 package sequenceList;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class SequenceList<T> implements Iterable<T> {
@@ -54,9 +55,51 @@ public class SequenceList<T> implements Iterable<T> {
         if (N==eles.length){
             resize(2*eles.length);
         }
-        eles[N++]=t;
+        eles[N]=t;
+        N++;
     }
 
+    //在i元素处插入元素T
+    public void insert(int i, T t) {
+        //先把i索引处的元素及其后面的元素依次向后移动一位
+        for (int index = N; index > i; index--) {
+            eles[index] = eles[index-1];
+        }
+        //再把t元素放到i索引处即可
+        eles[i] = t;
+        //元素个数+1
+        N++;
+    }
+
+    //删除指定索引的i处的元素，并返回该元素
+    public T remove(int i) {
+        //记录索引i的值
+        T current = eles[i];
+        //索引i后面的元素依次向前移动一位即可
+        for (int index = i; index < N-1; index++) {
+            eles[index] = eles[index+1];
+        }
+        //元素个数-1
+        N--;
+        return current;
+    }
+
+    //查找t元素第一次出现的位置
+    public int indexOf(T t) {
+        for (int i = 0; i < N; i++) {
+            if (eles[i].equals(t)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    @Override
+    public String toString() {
+        return "SequenceList{" +
+                "eles=" + Arrays.toString(eles) +
+                '}';
+    }
 
     @Override
     public Iterator<T> iterator() {
