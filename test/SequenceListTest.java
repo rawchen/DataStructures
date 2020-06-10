@@ -12,8 +12,7 @@ public class SequenceListTest {
         sl.insert("麦迪");
         sl.insert(0,"詹姆斯");
 
-        for (String s :
-                sl) {
+        for (String s : sl) {
             System.out.println(s);
         }
         System.out.println("----------------------------------");
