@@ -51,4 +51,21 @@ public class LinkList<T> {
         }
         return n.item;
     }
+
+    //向链表中插入元素t
+    public void insert(T t) {
+        //找到当前最后一个节点
+        Node n = head;
+        while (n.next != null) {
+            n = n.next;
+        }
+        //创建新节点保存元素t
+        Node newNode = new Node(t, null);
+        //让当前最后一个节点指向新节点
+        n.next = newNode;
+        //元素个数+1
+        N++;
+    }
+
+
 }
