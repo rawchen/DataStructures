@@ -33,27 +33,37 @@ public class TowWayLinkList<T> {
 
     //清空链表
     public void clear() {
-
+        this.head.next = null;
+        this.head.pre = null;
+        this.head.item = null;
+        this.last = null;
+        this.N = 0;
     }
 
     //获取链表的长度
     public int length() {
-        return -1;
+        return N;
     }
 
     //判断链表是否为空
     public boolean isEmpty() {
-        return false;
+        return N == 0;
     }
 
     //获取第一个元素
     public T getFirst() {
-        return null;
+        if (isEmpty()) {
+            return  null;
+        }
+        return head.next.item;
     }
 
     //获取最后一个元素
     public T getLast() {
-        return null;
+        if (isEmpty()) {
+            return null;
+        }
+        return last.item;
     }
 
     //插入元素t
