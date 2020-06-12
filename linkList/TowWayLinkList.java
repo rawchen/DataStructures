@@ -68,12 +68,45 @@ public class TowWayLinkList<T> {
 
     //插入元素t
     public void insert(T t) {
-
+        //如果链表为空
+        if (isEmpty()) {
+            //创建新节点
+            Node newNode = new Node(t, head, null);
+            //让新节点成为尾节点
+            last = newNode;
+            //让头结点指向尾节点
+            head.next = last;
+        } else {
+            //如果链表不为空
+            Node oldNode = last;
+            //创建新节点
+            Node newNode = new Node(t, oldNode, null);
+            //让当前尾节点指向新节点
+            oldNode.next = newNode;
+            //让新节点成为尾节点
+            last = newNode;
+        }
+        //元素个数+1
+        N++;
     }
 
     //向指定位置处插入元素t
     public void insert(int i, T t) {
-
+        //找到i位置的前一个节点
+        Node pre = head;
+        for (int index = 0; index < i; index++) {
+            pre = pre.next;
+        }
+        //找到i位置的节点
+        Node curr = pre.next;
+        //创建新节点
+        Node newNode = new Node(t, pre, curr);
+        //让i位置的前一个节点的下一个节点变为新节点
+        pre.next = newNode;
+        //让i位置的前一个节点变为新节点
+        curr.pre = newNode;
+        //元素个数+1
+        N++;
     }
 
     //获取指定位置i处的元素
