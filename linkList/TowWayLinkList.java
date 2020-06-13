@@ -1,6 +1,8 @@
 package linkList;
 
-public class TowWayLinkList<T> {
+import java.util.Iterator;
+
+public class TowWayLinkList<T> implements Iterable {
     //首节点
     private Node head;
     //最后一个节点
@@ -111,13 +113,66 @@ public class TowWayLinkList<T> {
 
     //获取指定位置i处的元素
     public T get(int i) {
-        return null;
+        Node n = head.next;
+        for (int index = 0; index < i; index++) {
+            n = n.next;
+        }
+        return n.item;
     }
 
     //找到元素t在链表中第一次出现的位置
     public int indexOf(T t) {
+        Node n = head;
+        for (int i = 0; n.next != null; i++) {
+            n = n.next;
+            if (n.next.equals(t)) {
+                return i;
+            }
+        }
         return -1;
     }
 
+    //删除位置i处的元素，并返回该元素
+    public T remove(int i) {
+        //找到i位置前一个节点
+        Node pre = head;
+        for (int index = 0; index < i; index++) {
+            pre = pre.next;
+        }
+        //找到i位置节点
+        Node curr = pre.next;
+        //找到i位置下一个节点
+        Node nextNode = curr.next;
+        //让i位置的一个节点的下一个节点变为i位置的下一个节点
+        pre.next = nextNode;
+        //让i位置的下一个的上一个节点变为i位置的前一个节点
+        nextNode.pre = pre;
+        //元素个数-1
+        N--;
+        return curr.item;
+    }
 
+    @Override
+    public Iterator iterator() {
+        return new TItertor();
+    }
+
+    private class TItertor implements Iterator{
+        private Node n;
+
+        public TItertor() {
+            this.n = head;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return n.next != null;
+        }
+
+        @Override
+        public Object next() {
+            n = n.next;
+            return n.item;
+        }
+    }
 }
