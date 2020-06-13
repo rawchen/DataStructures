@@ -2,7 +2,7 @@ package linkList;
 
 import java.util.Iterator;
 
-public class TowWayLinkList<T> implements Iterable {
+public class TowWayLinkList<T> implements Iterable<T> {
     //首节点
     private Node head;
     //最后一个节点
