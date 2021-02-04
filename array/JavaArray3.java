@@ -1,5 +1,6 @@
 package array;
 
+//数组下标越界异常
 public class JavaArray3 {
 	public static void main(String[] args) {
 		int[] arr = new int[2];
