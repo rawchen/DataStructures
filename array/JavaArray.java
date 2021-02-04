@@ -1,6 +1,6 @@
 package array;
 
-//Java数组
+// Java数组
 public class JavaArray {
 	public static void main(String[] args) {
 
