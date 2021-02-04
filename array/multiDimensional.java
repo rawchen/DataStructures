@@ -1,5 +1,6 @@
 package array;
 
+//多维数组
 public class multiDimensional {
 	public static void main(String args[]) {
 		// 声明和初始化二维数组
