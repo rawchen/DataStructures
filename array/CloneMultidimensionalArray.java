@@ -1,6 +1,5 @@
 package array;
 
-// Java程序演示
 // 克隆多维数组
 public class CloneMultidimensionalArray {
 	public static void main(String[] args) {
