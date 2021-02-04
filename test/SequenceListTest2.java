@@ -1,6 +1,6 @@
 package test;
 
-import sequenceList.SequenceList;
+import linear.SequenceList;
 
 public class SequenceListTest2 {
 	public static void main(String[] args) {

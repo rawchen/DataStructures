@@ -1,4 +1,4 @@
-package sequenceList;
+package linear;
 
 import java.util.Arrays;
 import java.util.Iterator;
