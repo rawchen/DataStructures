@@ -1,6 +1,6 @@
 package test;
 
-import linkList.LinkList;
+import linear.LinkList;
 
 public class LinkListTest {
 	public static void main(String[] args) {
