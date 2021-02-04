@@ -1,6 +1,5 @@
 package array;
 
-// Java程序演示
 // 数组的类对象
 
 class ClassObjectsForArrays {
