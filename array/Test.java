@@ -11,6 +11,7 @@ public class Test {
 
 	}
 
+	//数组元素求和
 	public static void sum(int[] arr) {
 		// 获取数组值的和
 		int sum = 0;
