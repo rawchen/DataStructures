@@ -1,7 +1,6 @@
 package array;
 
 // 方法返回数组
-
 public class Test2 {
 	public static void main(String args[]) {
 		int arr[] = m1();
