@@ -1,4 +1,4 @@
-package linkList;
+package linear;
 
 import java.util.Iterator;
 

@@ -1,7 +1,6 @@
 package test;
 
-import linkList.LinkList;
-import linkList.TowWayLinkList;
+import linear.TowWayLinkList;
 
 public class TowWayLinkListTest {
 	public static void main(String[] args) {
