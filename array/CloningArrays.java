@@ -1,6 +1,5 @@
 package array;
 
-// Java程序演示
 // 一维数组克隆
 public class CloningArrays {
 	public static void main(String[] args) {
