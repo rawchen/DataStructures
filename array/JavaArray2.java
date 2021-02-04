@@ -1,6 +1,6 @@
 package array;
 
-// 用于说明如何创建对象数组
+// 创建对象数组
 class Student {
 	public int roll_no;
 	public String name;
