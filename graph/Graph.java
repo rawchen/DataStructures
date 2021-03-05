@@ -36,11 +36,16 @@ public class Graph {
 
 	//向图中添加一条边 v-w
 	public void addEdge(int v, int w) {
-
+		//在无向图中，边是没有方向的，所以该边既可以说是从v到w的边，又可以说是从w到v的边，
+		//因此，需要让w出现在v的邻接表中，并且还要让v出现在w的邻接表中
+		adj[v].enqueue(w);
+		adj[w].enqueue(v);
+		//边的数量+1
+		E++;
 	}
 
 	//获取和顶点v相邻的所有顶点
 	public Queue<Integer> adj(int v) {
-		return null;
+		return adj[v];
 	}
 }
