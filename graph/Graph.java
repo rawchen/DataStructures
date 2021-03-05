@@ -11,7 +11,16 @@ public class Graph {
 	private Queue<Integer>[] adj;
 
 	public Graph(int V) {
+		//初始化顶点数量
+		this.V = V;
+		//初始化边的数量
+		this.E = 0;
+		//初始化邻接表
+		this.adj = new Queue[V];
 
+		for (int i = 0; i < adj.length; i++) {
+			adj[i] = new Queue<Integer>();
+		}
 	}
 
 
