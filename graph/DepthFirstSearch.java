@@ -12,7 +12,6 @@ public class DepthFirstSearch {
 		this.marked = new boolean[G.V()];
 		//初始化跟顶点s相通的顶点的数量
 		this.count = 0;
-
 		dfs(G, s);
 	}
 
