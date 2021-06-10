@@ -7,3 +7,5 @@ Comparable接口
 
 冒泡排序
 [sort/Bubble.java](https://github.com/rawchen/DataStructures/blob/master/sort/Bubble.java)
+
+[test/BubbleTest.java](https://github.com/rawchen/DataStructures/blob/master/test/BubbleTest.java)
